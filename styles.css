@@ -43,7 +43,7 @@ a { color: var(--navy); }
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
-  max-width: 1140px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
   height: 68px;
@@ -207,7 +207,7 @@ a { color: var(--navy); }
    ============================================================ */
 main { display: block; }
 section { padding: 76px 20px; }
-.wrap { max-width: 1140px; margin: 0 auto; }
+.wrap { max-width: 1500px; margin: 0 auto; }
 .gray { background: var(--gray); }
 
 .eyebrow {
@@ -221,7 +221,7 @@ section { padding: 76px 20px; }
 h1 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(34px, 4.6vw, 54px);
+  font-size: clamp(34px, 4.4vw, 62px);
   line-height: 1.12;
   margin-bottom: 20px;
 }
@@ -229,7 +229,7 @@ h1 em, h2 em { font-style: italic; color: var(--navy); }
 h2 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(27px, 3.4vw, 38px);
+  font-size: clamp(27px, 3.2vw, 44px);
   line-height: 1.18;
   margin-bottom: 14px;
 }
@@ -264,7 +264,7 @@ h2 {
   padding: 18px 20px;
 }
 .trust-inner {
-  max-width: 1140px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -389,8 +389,8 @@ a.chip:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(23,34,4
 .home-hero { padding-top: 60px; padding-bottom: 60px; }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 400px;
-  gap: 56px;
+  grid-template-columns: 1.25fr 460px;
+  gap: 72px;
   align-items: center;
 }
 .hero-copy h1 { margin-bottom: 18px; }
@@ -514,7 +514,7 @@ footer {
   padding: 52px 20px 80px; /* extra bottom room for the mobile sticky bar */
 }
 .footer-inner {
-  max-width: 1140px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
