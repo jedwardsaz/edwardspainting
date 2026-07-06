@@ -12,12 +12,22 @@
 <!-- shared files live one level up because this page sits in /100offad/ -->
 <link rel="stylesheet" href="../styles.css">
 <style>
-  .landing-hero { background: var(--gray); padding: 56px 20px 70px; }
-  .landing-grid {
-    max-width: 1050px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start;
+  .landing-hero {
+    background: var(--gray);
+    padding: 64px 20px 72px;
+    min-height: calc(100vh - 69px); /* fill the screen below the header */
+    display: flex;
+    align-items: center;
   }
-  @media (max-width: 880px) { .landing-grid { grid-template-columns: 1fr; } }
+  .landing-grid {
+    max-width: 1140px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1.1fr 440px; gap: 60px; align-items: center;
+  }
+  @media (max-width: 900px) {
+    .landing-hero { min-height: 0; padding: 44px 20px 56px; }
+    .landing-grid { grid-template-columns: 1fr; gap: 36px; }
+    .landing-grid form { order: -1; } /* form first on phones */
+  }
 
   /* $100-off badge — the offer is the star of this page */
   .offer-badge {
