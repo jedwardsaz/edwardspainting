@@ -3,98 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edwards Painting — Payson, AZ Painters | Residential &amp; Commercial</title>
-<meta name="description" content="Family-owned painting company in Payson, Arizona. Voted Best Painter two years in a row by the Payson Roundup. Residential, light commercial, repaints, new construction, and epoxy flooring. Free estimates.">
+<title>Free Estimate + $100 Off — Edwards Painting, Payson AZ</title>
+<meta name="description" content="You scanned our ad — claim your free estimate plus $100 off your first project with Edwards Painting in Payson, AZ. Voted Best Painter two years running.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<!-- shared files live one level up because this page sits in /100offad/ -->
 <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<style>
+  .landing-hero {
+    background: var(--gray);
+    padding: 64px 20px 72px;
+    min-height: calc(100vh - 69px); /* fill the screen below the header */
+    display: flex;
+    align-items: center;
+  }
+  .landing-grid {
+    max-width: 1500px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1.2fr 480px; gap: 80px; align-items: center;
+  }
+  @media (max-width: 900px) {
+    .landing-hero { min-height: 0; padding: 44px 20px 56px; }
+    .landing-grid { grid-template-columns: 1fr; gap: 36px; }
+    .landing-grid form { order: -1; } /* form first on phones */
+  }
 
+  /* $100-off badge — the offer is the star of this page */
+  .offer-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    background: var(--navy-deep);
+    color: #fff;
+    border: 1px solid rgba(201,162,75,0.55);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin: 20px 0 6px;
+  }
+  .offer-badge .amt {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .offer-badge .amt-label { font-weight: 800; font-size: 15px; line-height: 1.3; }
+  .offer-badge .amt-label small { display:block; font-weight:400; color:#B8C6D6; font-size:12.5px; }
+
+  .promo-tape {
+    display: inline-block;
+    background: #EFDFB4;
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 15px;
+    padding: 9px 20px;
+    transform: rotate(-1.2deg);
+    clip-path: polygon(1.5% 8%, 98% 0%, 100% 88%, 2.5% 100%, 0% 55%);
+    margin: 14px 0 6px;
+  }
+  .mini-points { list-style: none; margin-top: 22px; }
+  .mini-points li { padding: 7px 0 7px 30px; position: relative; font-weight: 700; color: var(--ink-soft); }
+  .mini-points li::before {
+    content: "✓"; position: absolute; left: 0; top: 7px;
+    color: var(--navy); font-weight: 800;
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- Slim header: no full nav, so scanners stay focused on the offer -->
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="index.html">Edwards <span>Painting</span></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span class="bars"></span></button>
-    <nav class="main-nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <div class="nav-drop">
-        <button aria-expanded="false" aria-haspopup="true">Services <span class="caret" aria-hidden="true"></span></button>
-        <div class="drop-menu">
-          <a href="residential.html">Residential<small>Interior, exterior, repaints, epoxy</small></a>
-          <a href="commercial.html">Commercial<small>Light commercial &amp; new construction</small></a>
-        </div>
-      </div>
-      <a href="index.html#areas">Service Areas</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="btn btn-primary btn-sm header-cta" href="100offad/">Free Estimate</a>
-    </nav>
-    <a class="header-phone" href="tel:9285952092">928-595-2092</a>
+    <a class="logo" href="#top">Edwards <span>Painting</span></a>
+    <a class="header-phone" href="tel:9285952092" style="margin-left:auto; display:block;">928-595-2092</a>
   </div>
 </header>
 
 <main>
 
-<!-- ============ HERO: text left, estimate form right ============ -->
-<section class="home-hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">Family-Owned · Licensed ROC 352921 · Payson, Arizona</p>
-      <h1>Your home deserves a painter who treats it like <em>their own.</em></h1>
-      <p class="lead">We're a family-owned crew serving Payson and the Rim Country — bonded, insured, and known for careful prep, clean lines, and estimates that show exactly what you're paying for.</p>
-      <div class="hero-meta">
+<section class="landing-hero">
+  <div class="landing-grid">
+    <div>
+      <p class="eyebrow">Thanks for scanning, neighbor</p>
+      <h1>Free estimate, plus <em>$100 off</em> your first project.</h1>
+      <p class="lead">You found us through our ad — so this offer is already yours. Fill out the form and we'll call to schedule a free, no-pressure walkthrough. Your $100 credit is applied to your first project.</p>
+
+      <div class="offer-badge">
+        <span class="amt">$100</span>
+        <span class="amt-label">OFF your first project<small>plus a free, no-obligation estimate</small></span>
+      </div>
+      <br>
+      <span class="promo-tape">Code <strong>SAVE100</strong> — mention it when we call</span>
+
+      <div style="margin-top:24px;">
         <div class="award-plate">
           <span class="stars" aria-hidden="true">★★</span>
           <span class="award-text">Voted Best Painter — Two Years in a Row<small>Payson Roundup Readers' Awards</small></span>
         </div>
-        <a class="hero-phone" href="tel:9285952092">928-595-2092</a>
       </div>
+
+      <ul class="mini-points">
+        <li>Licensed (ROC 352921), bonded &amp; insured</li>
+        <li>Family-owned in Payson — serving the Rim Country</li>
+        <li>Line-item estimates: know exactly what you're paying for</li>
+        <li>Discounts for military, first responders &amp; seniors</li>
+      </ul>
+
+      <p style="margin-top:22px; font-weight:800;">Rather talk to a person?</p>
+      <p><a href="tel:9285952092" style="font-family:var(--display); font-size:28px; font-weight:700; text-decoration:none; color:var(--navy-deep);">928-595-2092</a></p>
     </div>
 
-    <!-- Estimate form: sits in the hero on desktop, above the fold -->
-    <div class="hero-form" id="contact">
-      <form class="form-card lead-form" novalidate>
-        <h3>Get your free estimate</h3>
-        <p class="form-sub">Tell us the basics — we'll call you to schedule a walkthrough.</p>
-        <input type="hidden" name="source" value="home-hero">
-        <p class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>
-        <div class="field">
-          <label for="hf-name">Name</label>
-          <input id="hf-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="hf-phone">Phone</label>
-          <input id="hf-phone" name="phone" type="tel" autocomplete="tel" required>
-        </div>
-        <div class="field">
-          <label for="hf-email">Email</label>
-          <input id="hf-email" name="email" type="email" autocomplete="email">
-        </div>
-        <div class="field">
-          <label for="hf-project">Project type</label>
-          <select id="hf-project" name="project">
-            <option>Interior — Residential</option>
-            <option>Exterior — Residential</option>
-            <option>Interior — Light Commercial</option>
-            <option>Exterior — Light Commercial</option>
-            <option>Repaint</option>
-            <option>New Construction</option>
-            <option>Epoxy Flooring</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="hf-city">City</label>
-          <input id="hf-city" name="city" type="text" list="area-cities" placeholder="Payson, Pine, Strawberry…">
-          <datalist id="area-cities">
-            <option value="Payson"><option value="Pine"><option value="Strawberry"><option value="Happy Jack">
-          </datalist>
-        </div>
-        <button class="btn btn-primary" type="submit">Request my free estimate</button>
-        <p class="form-success" role="status">Thanks — your request is on its way. We'll be in touch shortly.</p>
-        <p class="form-note">No pressure, no obligation. We typically respond within one business day.</p>
-      </form>
-    </div>
+    <form class="form-card lead-form" novalidate>
+      <h3>Claim your $100 off</h3>
+      <p class="form-sub">Takes about a minute. Your $100 credit is applied automatically.</p>
+      <input type="hidden" name="source" value="qr-100off">
+      <input type="hidden" name="promo" value="SAVE100">
+      <p class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="lf-name">Name</label>
+        <input id="lf-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="lf-phone">Phone</label>
+        <input id="lf-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="field">
+        <label for="lf-email">Email</label>
+        <input id="lf-email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="lf-project">Project type</label>
+        <select id="lf-project" name="project">
+          <option>Interior — Residential</option>
+          <option>Exterior — Residential</option>
+          <option>Interior — Light Commercial</option>
+          <option>Exterior — Light Commercial</option>
+          <option>Repaint</option>
+          <option>New Construction</option>
+          <option>Epoxy Flooring</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lf-city">City</label>
+        <input id="lf-city" name="city" type="text" list="area-cities" placeholder="Payson, Pine, Strawberry…">
+        <datalist id="area-cities">
+          <option value="Payson"><option value="Pine"><option value="Strawberry"><option value="Happy Jack">
+        </datalist>
+      </div>
+      <div class="field">
+        <label for="lf-message">Anything we should know? <span style="font-weight:400; color:var(--ink-soft);">(optional)</span></label>
+        <textarea id="lf-message" name="message" rows="3" placeholder="Rooms, square footage, timing…"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Claim my $100 &amp; free estimate</button>
+      <p class="form-success" role="status">Thanks — your request is on its way. We'll be in touch shortly.</p>
+      <p class="form-note">We typically respond within one business day.</p>
+    </form>
   </div>
 </section>
 
@@ -103,93 +167,9 @@
     <span>Licensed — ROC 352921</span>
     <span>Bonded &amp; Insured</span>
     <span>Family-Owned &amp; Operated</span>
-    <span>Military, First Responder &amp; Senior Discounts</span>
+    <span>Voted Best Painter — Payson Roundup</span>
   </div>
 </div>
-
-<!-- ============ SERVICES (full width) ============ -->
-<section>
-  <div class="wrap">
-      <div id="services">
-        <p class="eyebrow">What we do</p>
-        <h2>Every surface, residential to commercial.</h2>
-        <p class="lead">Pick a card to see the full scope — or tell us about the job and we'll point you the right way.</p>
-        <div class="chip-grid">
-          <a class="chip" href="residential.html#interior">
-            <div class="chip-swatch"><span class="chip-code">EP-101 · RESIDENTIAL</span></div>
-            <div class="chip-body"><h3>Interior Painting</h3><p>Walls, ceilings, and trim with crisp lines — floors and furniture protected like they're ours.</p><span class="chip-link">Residential interior →</span></div>
-          </a>
-          <a class="chip" href="residential.html#exterior">
-            <div class="chip-swatch s2"><span class="chip-code">EP-102 · RESIDENTIAL</span></div>
-            <div class="chip-body"><h3>Exterior Painting</h3><p>Prep, prime, and products built for the Rim Country's sun, snow, and monsoons.</p><span class="chip-link">Residential exterior →</span></div>
-          </a>
-          <a class="chip" href="commercial.html#interior">
-            <div class="chip-swatch s3"><span class="chip-code">EP-201 · COMMERCIAL</span></div>
-            <div class="chip-body"><h3>Light Commercial Interior</h3><p>Offices, storefronts, and rentals — scheduled around your business hours.</p><span class="chip-link">Commercial interior →</span></div>
-          </a>
-          <a class="chip" href="commercial.html#exterior">
-            <div class="chip-swatch s4"><span class="chip-code">EP-202 · COMMERCIAL</span></div>
-            <div class="chip-body"><h3>Light Commercial Exterior</h3><p>Curb appeal that holds up — durable coatings for storefronts and multi-unit buildings.</p><span class="chip-link">Commercial exterior →</span></div>
-          </a>
-          <a class="chip" href="residential.html#repaints">
-            <div class="chip-swatch s5"><span class="chip-code">EP-301 · BOTH</span></div>
-            <div class="chip-body"><h3>Repaints &amp; New Construction</h3><p>From refreshing a lived-in home to first coats on brand-new builds.</p><span class="chip-link">See the details →</span></div>
-          </a>
-          <a class="chip" href="residential.html#epoxy">
-            <div class="chip-swatch s6"><span class="chip-code">EP-401 · FLOORS</span></div>
-            <div class="chip-body"><h3>Epoxy Flooring</h3><p>Tough, seamless, easy-to-clean floors for garages, shops, and workspaces.</p><span class="chip-link">Epoxy options →</span></div>
-          </a>
-        </div>
-      </div>
-  </div>
-</section>
-
-<!-- ============ PROCESS (full width) ============ -->
-<section class="gray">
-  <div class="wrap">
-    <p class="eyebrow">How we work</p>
-    <h2>No surprises. Just a job done the way we'd want it at our own house.</h2>
-    <p class="lead">A lot of what makes a paint job last happens before the first coat goes on.</p>
-    <div class="steps">
-      <div class="step"><h3>Walkthrough &amp; detailed estimate</h3><p>A line-item scope — surfaces, prep, products, timeline — so you know exactly what's included.</p></div>
-      <div class="step"><h3>Protect &amp; prep</h3><p>Furniture covered, floors masked, surfaces washed, sanded, patched, and primed. The step cheap bids skip.</p></div>
-      <div class="step"><h3>Paint</h3><p>Quality products, clean cut lines, and a job site tidied at the end of every day.</p></div>
-      <div class="step"><h3>Final walkthrough</h3><p>We don't call it done until you'd recommend us to your neighbor.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE AREAS ============ -->
-<section id="areas">
-  <div class="wrap areas-grid">
-    <div>
-      <p class="eyebrow">Where we work</p>
-      <h2>Proudly serving the Rim Country.</h2>
-      <p class="lead">Based in Payson and working across Northern Arizona's high country.</p>
-      <div class="city-chips">
-        <span>Payson</span>
-        <span>Pine</span>
-        <span>Strawberry</span>
-        <span>Happy Jack</span>
-        <span>Surrounding Northern Arizona Areas</span>
-      </div>
-    </div>
-    <div class="map-frame">
-      <iframe title="Edwards Painting service area map — Payson, Arizona and the Rim Country"
-        src="https://maps.google.com/maps?q=Payson,+AZ&z=9&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BAND ============ -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Ready for a fresh coat?</h2>
-    <p>Free estimates, honest scopes, and an award-winning crew that shows up when we say we will.</p>
-    <a class="btn btn-primary" style="background:#fff; color:var(--navy-deep);" href="100offad/">Get your free estimate</a>
-  </div>
-</section>
 
 </main>
 
@@ -197,14 +177,8 @@
   <div class="footer-inner">
     <div>
       <p class="brand">Edwards Painting LLC</p>
-      <p class="fine">Family-owned and operated in Payson, Arizona.<br>Licensed (ROC 352921) · Bonded · Insured<br>Voted Best Painter two years running — Payson Roundup</p>
+      <p class="fine">Family-owned and operated in Payson, Arizona.<br>Licensed (ROC 352921) · Bonded · Insured</p>
     </div>
-    <nav aria-label="Footer">
-      <a href="residential.html">Residential Services</a>
-      <a href="commercial.html">Commercial Services</a>
-      <a href="index.html#areas">Service Areas</a>
-      <a href="100offad/">Free Estimate</a>
-    </nav>
     <div class="fine">
       <a href="tel:9285952092">928-595-2092</a><br>
       <a href="mailto:edwardspaintingaz@gmail.com">edwardspaintingaz@gmail.com</a><br>
@@ -213,12 +187,7 @@
   </div>
 </footer>
 
-<!-- Mobile sticky action bar -->
-<div class="sticky-bar">
-  <a class="btn btn-ghost" href="tel:9285952092">Call Now</a>
-  <a class="btn btn-primary" href="100offad/">Free Estimate</a>
-</div>
-
+<!-- shared script lives one level up -->
 <script src="site.js"></script>
 </body>
 </html>
