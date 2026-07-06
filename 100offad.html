@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Estimate + $100 Off — Edwards Painting, Payson AZ</title>
+<meta name="description" content="You scanned our ad — claim your free estimate plus $100 off your first project with Edwards Painting in Payson, AZ. Voted Best Painter two years running.">
+<meta name="robots" content="noindex"><!-- landing page for ad traffic; remove if you want it indexed -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<!-- shared files live one level up because this page sits in /100offad/ -->
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .landing-hero { background: var(--gray); padding: 56px 20px 70px; }
+  .landing-grid {
+    max-width: 1050px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start;
+  }
+  @media (max-width: 880px) { .landing-grid { grid-template-columns: 1fr; } }
+
+  /* $100-off badge — the offer is the star of this page */
+  .offer-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    background: var(--navy-deep);
+    color: #fff;
+    border: 1px solid rgba(201,162,75,0.55);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin: 20px 0 6px;
+  }
+  .offer-badge .amt {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .offer-badge .amt-label { font-weight: 800; font-size: 15px; line-height: 1.3; }
+  .offer-badge .amt-label small { display:block; font-weight:400; color:#B8C6D6; font-size:12.5px; }
+
+  .promo-tape {
+    display: inline-block;
+    background: #EFDFB4;
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 15px;
+    padding: 9px 20px;
+    transform: rotate(-1.2deg);
+    clip-path: polygon(1.5% 8%, 98% 0%, 100% 88%, 2.5% 100%, 0% 55%);
+    margin: 14px 0 6px;
+  }
+  .mini-points { list-style: none; margin-top: 22px; }
+  .mini-points li { padding: 7px 0 7px 30px; position: relative; font-weight: 700; color: var(--ink-soft); }
+  .mini-points li::before {
+    content: "✓"; position: absolute; left: 0; top: 7px;
+    color: var(--navy); font-weight: 800;
+  }
+</style>
+</head>
+<body>
+
+<!-- Slim header: no full nav, so scanners stay focused on the offer -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">Edwards <span>Painting</span></a>
+    <a class="header-phone" href="tel:9285952092" style="margin-left:auto; display:block;">928-595-2092</a>
+  </div>
+</header>
+
+<main>
+
+<section class="landing-hero">
+  <div class="landing-grid">
+    <div>
+      <p class="eyebrow">Thanks for scanning, neighbor</p>
+      <h1>Free estimate, plus <em>$100 off</em> your first project.</h1>
+      <p class="lead">You found us through our ad — so this offer is already yours. Fill out the form and we'll call to schedule a free, no-pressure walkthrough. Your $100 credit is applied to your first project.</p>
+
+      <div class="offer-badge">
+        <span class="amt">$100</span>
+        <span class="amt-label">OFF your first project<small>plus a free, no-obligation estimate</small></span>
+      </div>
+      <br>
+      <span class="promo-tape">Code <strong>SAVE100</strong> — mention it when we call</span>
+
+      <div style="margin-top:24px;">
+        <div class="award-plate">
+          <span class="stars" aria-hidden="true">★★</span>
+          <span class="award-text">Voted Best Painter — Two Years in a Row<small>Payson Roundup Readers' Awards</small></span>
+        </div>
+      </div>
+
+      <ul class="mini-points">
+        <li>Licensed (ROC 352921), bonded &amp; insured</li>
+        <li>Family-owned in Payson — serving the Rim Country</li>
+        <li>Line-item estimates: know exactly what you're paying for</li>
+        <li>Discounts for military, first responders &amp; seniors</li>
+      </ul>
+
+      <p style="margin-top:22px; font-weight:800;">Rather talk to a person?</p>
+      <p><a href="tel:9285952092" style="font-family:var(--display); font-size:28px; font-weight:700; text-decoration:none; color:var(--navy-deep);">928-595-2092</a></p>
+    </div>
+
+    <form class="form-card lead-form" novalidate>
+      <h3>Claim your $100 off</h3>
+      <p class="form-sub">Takes about a minute. Your $100 credit is applied automatically.</p>
+      <input type="hidden" name="source" value="qr-100off">
+      <input type="hidden" name="promo" value="SAVE100">
+      <p class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="lf-name">Name</label>
+        <input id="lf-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="lf-phone">Phone</label>
+        <input id="lf-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="field">
+        <label for="lf-email">Email</label>
+        <input id="lf-email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="lf-project">Project type</label>
+        <select id="lf-project" name="project">
+          <option>Interior — Residential</option>
+          <option>Exterior — Residential</option>
+          <option>Interior — Light Commercial</option>
+          <option>Exterior — Light Commercial</option>
+          <option>Repaint</option>
+          <option>New Construction</option>
+          <option>Epoxy Flooring</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lf-city">City</label>
+        <input id="lf-city" name="city" type="text" list="area-cities" placeholder="Payson, Pine, Strawberry…">
+        <datalist id="area-cities">
+          <option value="Payson"><option value="Pine"><option value="Strawberry"><option value="Happy Jack">
+        </datalist>
+      </div>
+      <div class="field">
+        <label for="lf-message">Anything we should know? <span style="font-weight:400; color:var(--ink-soft);">(optional)</span></label>
+        <textarea id="lf-message" name="message" rows="3" placeholder="Rooms, square footage, timing…"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Claim my $100 &amp; free estimate</button>
+      <p class="form-success" role="status">Thanks — your request is on its way. We'll be in touch shortly.</p>
+      <p class="form-note">We typically respond within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <span>Licensed — ROC 352921</span>
+    <span>Bonded &amp; Insured</span>
+    <span>Family-Owned &amp; Operated</span>
+    <span>Voted Best Painter — Payson Roundup</span>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="brand">Edwards Painting LLC</p>
+      <p class="fine">Family-owned and operated in Payson, Arizona.<br>Licensed (ROC 352921) · Bonded · Insured</p>
+    </div>
+    <div class="fine">
+      <a href="tel:9285952092">928-595-2092</a><br>
+      <a href="mailto:edwardspaintingaz@gmail.com">edwardspaintingaz@gmail.com</a><br>
+      Serving Payson &amp; the Rim Country
+    </div>
+  </div>
+</footer>
+
+<!-- shared script lives one level up -->
+<script src="../site.js"></script>
+</body>
+</html>
