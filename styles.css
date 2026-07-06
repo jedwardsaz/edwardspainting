@@ -385,21 +385,37 @@ a.chip:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(23,34,4
 .form-success.show { display: block; }
 .hp-field { position: absolute; left: -9999px; opacity: 0; } /* honeypot */
 
-/* home: sticky form rail alongside services + process */
-.page-grid {
+/* home hero: copy on the left, estimate form on the right */
+.home-hero { padding-top: 60px; padding-bottom: 60px; }
+.hero-grid {
   display: grid;
-  grid-template-columns: 372px 1fr;
-  gap: 52px;
-  /* rail column stretches to full row height so the form can stick and travel */
+  grid-template-columns: 1.15fr 400px;
+  gap: 56px;
+  align-items: center;
 }
-.rail-col { grid-column: 1; }
-.page-main { grid-column: 2; }
-.sticky-rail { position: sticky; top: 88px; }
-.page-main .chip-grid { grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); }
-@media (max-width: 940px) {
-  .page-grid { grid-template-columns: 1fr; }
-  .rail-col, .page-main { grid-column: 1; }
-  .sticky-rail { position: static; }
+.hero-copy h1 { margin-bottom: 18px; }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 30px;
+}
+.hero-phone {
+  font-family: var(--display);
+  font-size: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--navy-deep);
+}
+.hero-phone:hover { color: var(--navy); }
+.hero-form .form-card { margin: 0; }
+
+/* stack the hero on tablets and phones; form comes first so it's reachable */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-form { order: -1; }
+  .home-hero { padding-top: 40px; }
 }
 
 /* ============================================================

@@ -27,7 +27,7 @@
       </div>
       <a href="index.html#areas">Service Areas</a>
       <a href="index.html#contact">Contact</a>
-      <a class="btn btn-primary btn-sm header-cta" href="estimate.html">Free Estimate</a>
+      <a class="btn btn-primary btn-sm header-cta" href="100offad/">Free Estimate</a>
     </nav>
     <a class="header-phone" href="tel:9285952092">928-595-2092</a>
   </div>
@@ -35,41 +35,28 @@
 
 <main>
 
-<!-- ============ HERO INTRO ============ -->
-<section style="padding-bottom: 40px;" id="top">
-  <div class="wrap">
-    <p class="eyebrow">Family-Owned · Licensed ROC 352921 · Payson, Arizona</p>
-    <h1 style="max-width: 820px;">Your home deserves a painter who treats it like <em>their own.</em></h1>
-    <p class="lead">We're a family-owned crew serving Payson and the Rim Country — bonded, insured, and known for careful prep, clean lines, and estimates that show exactly what you're paying for.</p>
-    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin-top: 28px;">
-      <div class="award-plate">
-        <span class="stars" aria-hidden="true">★★</span>
-        <span class="award-text">Voted Best Painter — Two Years in a Row<small>Payson Roundup Readers' Awards</small></span>
+<!-- ============ HERO: text left, estimate form right ============ -->
+<section class="home-hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Family-Owned · Licensed ROC 352921 · Payson, Arizona</p>
+      <h1>Your home deserves a painter who treats it like <em>their own.</em></h1>
+      <p class="lead">We're a family-owned crew serving Payson and the Rim Country — bonded, insured, and known for careful prep, clean lines, and estimates that show exactly what you're paying for.</p>
+      <div class="hero-meta">
+        <div class="award-plate">
+          <span class="stars" aria-hidden="true">★★</span>
+          <span class="award-text">Voted Best Painter — Two Years in a Row<small>Payson Roundup Readers' Awards</small></span>
+        </div>
+        <a class="hero-phone" href="tel:9285952092">928-595-2092</a>
       </div>
-      <a href="tel:9285952092" style="font-family:var(--display); font-size:27px; font-weight:700; text-decoration:none; color:var(--navy-deep);">928-595-2092</a>
     </div>
-  </div>
-</section>
 
-<div class="trust">
-  <div class="trust-inner">
-    <span>Licensed — ROC 352921</span>
-    <span>Bonded &amp; Insured</span>
-    <span>Family-Owned &amp; Operated</span>
-    <span>Military, First Responder &amp; Senior Discounts</span>
-  </div>
-</div>
-
-<!-- ============ STICKY FORM RAIL alongside services + process ============ -->
-<section id="contact" style="padding-top: 56px;">
-  <div class="wrap page-grid">
-
-    <!-- Sticky estimate form: rides alongside the content as you scroll -->
-    <aside class="rail-col">
-      <form class="form-card lead-form sticky-rail" novalidate>
+    <!-- Estimate form: sits in the hero on desktop, above the fold -->
+    <div class="hero-form" id="contact">
+      <form class="form-card lead-form" novalidate>
         <h3>Get your free estimate</h3>
         <p class="form-sub">Tell us the basics — we'll call you to schedule a walkthrough.</p>
-        <input type="hidden" name="source" value="home-sticky">
+        <input type="hidden" name="source" value="home-hero">
         <p class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>
         <div class="field">
           <label for="hf-name">Name</label>
@@ -107,9 +94,22 @@
         <p class="form-success" role="status">Thanks — your request is on its way. We'll be in touch shortly.</p>
         <p class="form-note">No pressure, no obligation. We typically respond within one business day.</p>
       </form>
-    </aside>
+    </div>
+  </div>
+</section>
 
-    <div class="page-main">
+<div class="trust">
+  <div class="trust-inner">
+    <span>Licensed — ROC 352921</span>
+    <span>Bonded &amp; Insured</span>
+    <span>Family-Owned &amp; Operated</span>
+    <span>Military, First Responder &amp; Senior Discounts</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES (full width) ============ -->
+<section>
+  <div class="wrap">
       <div id="services">
         <p class="eyebrow">What we do</p>
         <h2>Every surface, residential to commercial.</h2>
@@ -141,25 +141,26 @@
           </a>
         </div>
       </div>
+  </div>
+</section>
 
-      <div style="margin-top: 70px;">
-        <p class="eyebrow">How we work</p>
-        <h2>No surprises. Just a job done the way we'd want it at our own house.</h2>
-        <p class="lead">A lot of what makes a paint job last happens before the first coat goes on.</p>
-        <div class="steps">
-          <div class="step"><h3>Walkthrough &amp; detailed estimate</h3><p>A line-item scope — surfaces, prep, products, timeline — so you know exactly what's included.</p></div>
-          <div class="step"><h3>Protect &amp; prep</h3><p>Furniture covered, floors masked, surfaces washed, sanded, patched, and primed. The step cheap bids skip.</p></div>
-          <div class="step"><h3>Paint</h3><p>Quality products, clean cut lines, and a job site tidied at the end of every day.</p></div>
-          <div class="step"><h3>Final walkthrough</h3><p>We don't call it done until you'd recommend us to your neighbor.</p></div>
-        </div>
-      </div>
+<!-- ============ PROCESS (full width) ============ -->
+<section class="gray">
+  <div class="wrap">
+    <p class="eyebrow">How we work</p>
+    <h2>No surprises. Just a job done the way we'd want it at our own house.</h2>
+    <p class="lead">A lot of what makes a paint job last happens before the first coat goes on.</p>
+    <div class="steps">
+      <div class="step"><h3>Walkthrough &amp; detailed estimate</h3><p>A line-item scope — surfaces, prep, products, timeline — so you know exactly what's included.</p></div>
+      <div class="step"><h3>Protect &amp; prep</h3><p>Furniture covered, floors masked, surfaces washed, sanded, patched, and primed. The step cheap bids skip.</p></div>
+      <div class="step"><h3>Paint</h3><p>Quality products, clean cut lines, and a job site tidied at the end of every day.</p></div>
+      <div class="step"><h3>Final walkthrough</h3><p>We don't call it done until you'd recommend us to your neighbor.</p></div>
     </div>
-
   </div>
 </section>
 
 <!-- ============ SERVICE AREAS ============ -->
-<section class="gray" id="areas">
+<section id="areas">
   <div class="wrap areas-grid">
     <div>
       <p class="eyebrow">Where we work</p>
@@ -186,7 +187,7 @@
   <div class="wrap">
     <h2>Ready for a fresh coat?</h2>
     <p>Free estimates, honest scopes, and an award-winning crew that shows up when we say we will.</p>
-    <a class="btn btn-primary" style="background:#fff; color:var(--navy-deep);" href="estimate.html">Get your free estimate</a>
+    <a class="btn btn-primary" style="background:#fff; color:var(--navy-deep);" href="100offad/">Get your free estimate</a>
   </div>
 </section>
 
@@ -202,7 +203,7 @@
       <a href="residential.html">Residential Services</a>
       <a href="commercial.html">Commercial Services</a>
       <a href="index.html#areas">Service Areas</a>
-      <a href="estimate.html">Free Estimate</a>
+      <a href="100offad/">Free Estimate</a>
     </nav>
     <div class="fine">
       <a href="tel:9285952092">928-595-2092</a><br>
@@ -215,7 +216,7 @@
 <!-- Mobile sticky action bar -->
 <div class="sticky-bar">
   <a class="btn btn-ghost" href="tel:9285952092">Call Now</a>
-  <a class="btn btn-primary" href="estimate.html">Free Estimate</a>
+  <a class="btn btn-primary" href="100offad/">Free Estimate</a>
 </div>
 
 <script src="site.js"></script>
