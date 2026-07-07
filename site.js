@@ -32,54 +32,70 @@
     });
   }
 
-  // ---------- Lead forms ----------
-  // ============================================================
-  // BACKEND WIRING (Twilio / Mailchimp)
-  // Replace the mailto fallback below with a POST to your endpoint:
-  //
-  //   fetch('https://YOUR-BACKEND/lead', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify(data)   // `data` is built below
-  //   })
-  //
-  // Every form sends: name, phone, email, project, city, message,
-  // source ("home-sticky" | "qr-landing"), promo.
-  // Leads should be delivered to: edwardspaintingaz@gmail.com
-  // ============================================================
-  var LEAD_EMAIL = 'edwardspaintingaz@gmail.com';
+  // ---------- Lead forms → Web3Forms → edwardspaintingaz@gmail.com ----------
+  // Web3Forms catches the submission server-side and emails every field to the
+  // inbox tied to this access key. The key is safe to expose in page code — it
+  // only permits submitting this form, nothing else.
+  var WEB3FORMS_KEY = '9e5136a5-c8af-4436-8758-24edb78bbbeb';
 
   document.querySelectorAll('form.lead-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // honeypot: bots fill this hidden field; silently drop
-      if (form.querySelector('[name="company_website"]') &&
-          form.querySelector('[name="company_website"]').value) return;
+      // honeypot: bots fill this hidden field; silently drop the submission
+      var hp = form.querySelector('[name="company_website"]');
+      if (hp && hp.value) return;
 
+      // gather the fields the visitor entered
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
 
-      // --- TEMPORARY FALLBACK until the backend is wired ---
-      // Opens a pre-filled email so no lead is lost pre-launch.
-      var subject = 'Estimate request — ' + (data.project || 'Painting project');
-      var body = [
-        'Name: ' + (data.name || ''),
-        'Phone: ' + (data.phone || ''),
-        'Email: ' + (data.email || ''),
-        'Project type: ' + (data.project || ''),
-        'City: ' + (data.city || ''),
-        'Details: ' + (data.message || ''),
-        'Promo: ' + (data.promo || ''),
-        'Source: ' + (data.source || '')
-      ].join('\n');
-      window.location.href = 'mailto:' + LEAD_EMAIL +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-      // --- END TEMPORARY FALLBACK ---
+      // build the Web3Forms payload
+      var payload = {
+        access_key: WEB3FORMS_KEY,
+        // a clear subject line so leads are easy to spot in Gmail
+        subject: 'New Estimate Request — ' + (data.project || 'Painting') +
+                 (data.city ? ' (' + data.city + ')' : ''),
+        from_name: 'Edwards Painting Website',
+        // the actual lead details
+        name: data.name || '',
+        phone: data.phone || '',
+        email: data.email || '',
+        project_type: data.project || '',
+        city: data.city || '',
+        details: data.message || '',
+        promo_code: data.promo || '',
+        came_from: data.source || ''
+      };
 
+      var btn = form.querySelector('button[type="submit"]');
       var ok = form.querySelector('.form-success');
-      if (ok) ok.classList.add('show');
+      var original = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (result) {
+        if (result.success) {
+          if (ok) ok.classList.add('show');
+          form.reset();
+          if (btn) btn.textContent = 'Sent ✓';
+        } else {
+          throw new Error(result.message || 'submit failed');
+        }
+      })
+      .catch(function () {
+        // network/hiccup fallback: don't lose the lead — offer the phone number
+        if (ok) {
+          ok.textContent = "Something went wrong sending that. Please call us at 928-595-2092 and we'll get you taken care of.";
+          ok.classList.add('show');
+        }
+        if (btn) { btn.disabled = false; btn.textContent = original; }
+      });
     });
   });
 })();
